@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
+<body>
+<h:form>
+	<rich:panel>
+		<f:facet name="header">
+        Write your own custom rich components with built-in AJAX support
+        </f:facet>
+		<rich:toolbar>
+			<rich:dropDownMenu label="Prueba DropDownMenu">
+				<rich:menuItem label="MenuItem" action="dasdsa" />
+				<rich:menuGroup label="MenuGroup">
+					<rich:menuItem label="MenuItem" action="Prueba" />
+				</rich:menuGroup>
+			</rich:dropDownMenu>
+		</rich:toolbar>
+		<h:outputText value="Panel Body" />
+
+		<rich:tree value="#{menuArbol}" var="nodo" nodeType="#{nodo.tipo}"
+			id="MenuArbol" toggleType="client" selectionType="ajax"
+			render="menuOrdenSl">
+			<rich:treeNode type="Raiz">
+				<h:outputText value="#{nodo.dato}" />
+			</rich:treeNode>
+			<rich:treeNode type="Nodo">
+				<h:outputText value="#{nodo.dato}" />
+			</rich:treeNode>
+			<rich:treeNode type="Hoja">
+				<h:outputText value="#{nodo.dato}" />
+			</rich:treeNode>
+		</rich:tree>
+	</rich:panel>
+</h:form>
+</body>
+</html>
