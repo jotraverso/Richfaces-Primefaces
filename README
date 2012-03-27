@@ -1,0 +1,5 @@
+Here is an proof of concept of Richfaces 4.2.0.Final running with Primefaces 3.2.
+richfaces project is a simple JSF 2.0 sample with a two pages, rendering some controls.
+
+richfaces-primefaces-fix is a JAR project for include the richfaces mapping file a jquery.js (obtained from primefaces 3.2) making booth library components
+to use the same jquery version.
